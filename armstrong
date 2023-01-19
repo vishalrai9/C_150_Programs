@@ -1,0 +1,33 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+void main()
+{
+    int num1, num2, num3, i = 0, d, sum = 0;
+    printf("Enter any number\n");
+    scanf("%d", &num1);
+    num2 = num1;
+    num3 = num1;
+    while (num2 != 0)
+    {
+        num2 = num2 / 10;
+        i++;
+    }
+    while (num3 != 0)
+    {
+        d = num3 % 10;
+        sum = sum + pow(d, i);
+        num3 = num3 / 10;
+    }
+    if (num1 == sum)
+        printf("It is a Armstrong no.");
+    else
+        printf("It is not a Armstrong no.");
+}
